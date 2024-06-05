@@ -29,7 +29,12 @@ export default defineComponent({
         const handleUpload = async (event: Event) => {
             const target = event.target as HTMLInputElement;
             if (target.files) {
-                file.value = target.files[0];
+                const uploadedFile = target.files[0];
+                if (uploadedFile.type === 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet') {
+                    file.value = uploadedFile;
+                } else {
+                    Notify.create("Please upload a .xlsx file");
+                }
             }
         }
 
@@ -58,7 +63,7 @@ export default defineComponent({
     return {
         file,
         handleUpload
-        // uploadFile
+        uploadFile
     };
 }
 })
