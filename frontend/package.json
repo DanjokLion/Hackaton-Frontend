@@ -6,8 +6,6 @@
     "author": "Popov D. <hellraygh@gmail.com>",
     "private": true,
     "scripts": {
-        "lint": "eslint --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts ./",
-        "lint:fix": "eslint --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix ./",
         "test": "echo \"No test specified\" && exit 0",
         "serve": "quasar dev",
         "build": "quasar build"
@@ -24,15 +22,7 @@
     "devDependencies": {
         "@quasar/app-vite": "^1.4.3",
         "@types/node": "^12.20.21",
-        "@typescript-eslint/eslint-plugin": "^5.10.0",
-        "@typescript-eslint/parser": "^5.10.0",
         "autoprefixer": "^10.4.2",
-        "eslint": "^8.11.0",
-        "eslint-config-standard": "^17.0.0",
-        "eslint-plugin-import": "^2.19.1",
-        "eslint-plugin-n": "^15.0.0",
-        "eslint-plugin-promise": "^6.0.0",
-        "eslint-plugin-vue": "^9.0.0",
         "typescript": "^4.5.4"
     },
     "engines": {

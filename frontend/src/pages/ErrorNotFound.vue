@@ -1,21 +1,21 @@
 <template>
-    <div class="fullscreen bg-green text-white text-center q-pa-md flex flex-center">
-        <div>
-            <div style="font-size: 30vh">
-                404
-            </div>
-            <div class="text=h2" style="opacity:.4;">
-                Oops. Nothing here...
-            </div>
-            <q-btn
-                class="q-mt-xl"
-                color="white"
-                text-color="lime"
-                unelevated
-                to="/"
-                label="Go Home"
-                no-caps
-            />
-        </div>
-    </div>
-</template>
+    <q-page class="flex flex-center">
+      <div class="text-center">
+        <h1>404</h1>
+        <p>Page Not Found</p>
+        <q-btn color="primary" @click="$router.push('/')">Go Home</q-btn>
+      </div>
+    </q-page>
+  </template>
+  
+  <script lang="ts">
+  import { defineComponent } from 'vue';
+  
+  export default defineComponent({
+    name: 'ErrorNotFound'
+  });
+  </script>
+  
+  <style>
+  </style>
+  
