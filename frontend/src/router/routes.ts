@@ -8,7 +8,30 @@ const routes: RouteRecordRaw[] = [
             {
                 path: '',
                 component: () => import('pages/MainPage.vue')
+            },
+            {
+                path: 'dashboard',
+                component: () => import('pages/DashboardStaticPage.vue')
+            },
+            {
+                path: 'statistics',
+                component: () => import('pages/StatisticPage.vue')
+            },
+            {
+                path: 'player-analysis',
+                component: () => import('pages/PlayerAnalysisPage.vue')
+            },
+            {
+                path: 'term-maps',
+                component: () => import('pages/TermMapsPage.vue')
+            },
+            {
+                path: 'dashboardTemp/:results',
+                name: 'Dashboard',
+                component: () => import('pages/DashboardTempPage.vue'),
+                props: route => ({ results: route.params.results })
             }
+
         ]
     },
     {

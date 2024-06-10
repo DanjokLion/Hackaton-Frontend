@@ -7,8 +7,8 @@
   
   <script lang="ts">
   import { defineComponent, ref } from 'vue';
-  import UploadForm from '../components/Main/UploadForm.vue';
-  import ResultsTable from '../components/Main/ResultsTable.vue';
+  import UploadForm from './UploadForm.vue';
+  import ResultsTable from './ResultsTable.vue';
   
   export default defineComponent({
     components: {

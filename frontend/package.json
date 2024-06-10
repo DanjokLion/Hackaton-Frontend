@@ -14,9 +14,11 @@
         "@quasar/extras": "^1.16.4",
         "@vueuse/components": "^10.7.2",
         "axios": "^1.2.1",
+        "echarts": "^5.5.0",
         "pinia": "^2.0.11",
         "quasar": "^2.8.0",
         "vue": "^3.2.29",
+        "vue-echarts": "^6.7.3",
         "vue-router": "^4.0.12"
     },
     "devDependencies": {

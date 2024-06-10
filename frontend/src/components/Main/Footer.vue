@@ -14,9 +14,9 @@
   
   <style>
   .footer{
-      background-color: #4caf50;
+      background-color: #1976D2;
       color: white;
       text-align: center;
-      padding: 1rem;
+      padding: 0.1rem;
   }
   </style>
