@@ -1,0 +1,28 @@
+#Dockerfile Vue3
+FROM node:14 as build-stage
+
+#Set working directory
+WORKDIR /app
+
+#Copy all files
+COPY package*.json ./
+RUN npm install
+
+#Copy the rest of the code and build
+COPY . .
+RUN npm run build
+
+#Serve the vuejs
+FROM nginx:stable-alpine as production-stage
+
+#Copy the built vuejs
+COPY --from=build-stage /app/dist /usr/share/nginx/html
+
+#Copy the nginx config
+COPY nginx.conf /etc/nginx/nginx.conf
+
+#Expose the port the app runs on
+EXPOSE 80
+
+#Start the app
+CMD ["nginx", "-g", "daemon off;"]
